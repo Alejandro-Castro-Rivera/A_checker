@@ -1,0 +1,18 @@
+def A_checker_concept_code(a):
+    a.strip()
+    lst = a.split()
+    i = 0
+    if a == " ":
+        return "All words start with A"
+    elif lst[0] == 'a' or lst[0] == 'A':
+        lst.remove(lst[i])
+        print(lst)
+        return A_checker_concept_code(a)
+    else:
+        return "At least one word doesn't start with A"
+    return 0
+
+print(A_checker_concept_code(input()))
+
+#Test: a an all also after actors alright artistic bee
+##Current error: it's only looking for "a" or "A" ("an" doesn't start with a)
