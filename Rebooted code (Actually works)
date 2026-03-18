@@ -1,0 +1,14 @@
+def a_checker(word):
+    if word[0] == "a" or word[0] == "A":
+        return True
+    return False
+
+def letter_a_starter_checker(txt_for_checking):
+    not_a = []
+    new_list = txt_for_checking.split()
+    for word in new_list:
+        if not a_checker(word):
+            not_a.append(word)
+    return not_a
+
+print(letter_a_starter_checker(input("Insert the text. > ")))
