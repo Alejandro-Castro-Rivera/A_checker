@@ -1,6 +1,9 @@
 def a_checker(word):
-    if word[0] == "a" or word[0] == "A" or word[0] =='"' or word[0] == "'":
+    if word[0] == "a" or word[0] == "A":
         return True
+    if word[0] == "'" or word[0] == '"' or word[0] == "(" or word[0] == "{" or word[0] == "[":
+        if word[1] == "a" or word[1] == "A":
+            return True
     return False
 
 def letter_a_starter_checker(txt_for_checking):
