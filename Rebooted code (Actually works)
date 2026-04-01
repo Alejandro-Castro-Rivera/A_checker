@@ -1,5 +1,5 @@
 def a_checker(word):
-    if word[0] == "a" or word[0] == "A":
+    if word[0] == "a" or word[0] == "A" or word[0] =='"' or word[0] == "'":
         return True
     return False
 
