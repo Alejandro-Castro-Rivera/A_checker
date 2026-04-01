@@ -1,14 +1,17 @@
 def a_checker(word):
     if word[0] == "a" or word[0] == "A":
         return True
-    if word[0] == "'" or word[0] == '"' or word[0] == "(" or word[0] == "{" or word[0] == "[":
+    if (word[0] == "'" or word[0] == '"' or word[0] == "(" or word[0] == "{" or word[0] == "[" or word[0] == "#"
+            or word[0] == "@" or word[0] == "$"):
         if word[1] == "a" or word[1] == "A":
             return True
     return False
 
 def letter_a_starter_checker(txt_for_checking):
+    no_underscore = txt_for_checking.replace("_", " ")
+    no_dashes = no_underscore.replace("-", " ")
     not_a = []
-    new_list = txt_for_checking.split()
+    new_list = no_dashes.split()
     for word in new_list:
         if not a_checker(word):
             not_a.append(word)
